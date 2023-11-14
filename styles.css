@@ -1,0 +1,64 @@
+table, th, td { 
+    border: 2px solid black; 
+ } 
+ th {
+    text-align: left;
+ }
+ td{
+    text-align: center;
+ }
+
+ /**    Move Styles
+ */
+
+ .Normal{
+    background-color: bisque;
+ }
+ .Fighting{
+    background-color: bisque;
+ }
+ .Flying{
+    background-color: bisque;
+ }
+.Poison{
+    background-color: bisque;
+}	
+.Ground{
+    background-color: bisque;
+}
+.Rock{
+    background-color: bisque;
+}
+.Bug{
+    background-color: bisque;
+}
+.Dark{
+    background-color: bisque;
+}
+.Steel{
+    background-color: bisque;
+}
+.Fire{
+    background-color: bisque;
+}
+.Grass{
+    background-color: bisque;
+}
+.Water{
+    background-color: bisque;
+}
+.Electric{
+    background-color: bisque;
+}
+.Psychic{
+    background-color: bisque;
+}
+.Ghost{
+    background-color: bisque;
+}
+.Ice{
+    background-color: bisque;
+}
+.Dragon{
+    background-color: bisque;
+}
