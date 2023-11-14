@@ -1,5 +1,10 @@
+body{
+    background-color: lightgray;
+}
+
 table, th, td { 
     border: 2px solid black; 
+    background-color: white;
  } 
  th {
     text-align: left;
@@ -8,6 +13,9 @@ table, th, td {
     text-align: center;
  }
 
+li{
+    margin-left: 25px;
+}
 .HeaderContainer{
     display: flex;
     align-items: center;
