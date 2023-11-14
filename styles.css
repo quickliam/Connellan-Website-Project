@@ -24,53 +24,87 @@ table, th, td {
  */
 
  .Normal{
-    background-color: bisque;
+    background-color: rgb(168, 168, 120);
+    color: white;
+    padding: 0px 5px;
  }
  .Fighting{
-    background-color: bisque;
+    background-color: rgb(192, 48, 40);
+    color: white;
+    padding: 0px 5px;
  }
  .Flying{
-    background-color: bisque;
+    background-color: rgb(158, 144, 240);
+    color: white;
+    padding: 0px 5px;
  }
 .Poison{
-    background-color: bisque;
+    background-color: rgb(160, 64, 160);
+    color: white;
+    padding: 0px 5px;
 }	
 .Ground{
-    background-color: bisque;
+    background-color: rgb(224, 192, 104);
+    color: white;
+    padding: 0px 5px;
 }
 .Rock{
-    background-color: bisque;
+    background-color: rgb(184, 160, 56);
+    color: white;
+    padding: 0px 5px;
 }
 .Bug{
-    background-color: bisque;
+    background-color: rgb(168, 184, 32);
+    color: white;
+    padding: 0px 5px;
 }
 .Dark{
-    background-color: bisque;
+    background-color: rgb(112, 88, 72);
+    color: white;
+    padding: 0px 5px;
 }
 .Steel{
-    background-color: bisque;
+    background-color: rgb(184, 184, 208);
+    color: white;
+    padding: 0px 5px;
 }
 .Fire{
-    background-color: bisque;
+    background-color: rgb(240, 128, 48);
+    color: white;
+    padding: 0px 5px;
 }
 .Grass{
-    background-color: bisque;
+    background-color: rgb(120, 200, 80);
+    color: white;
+    padding: 0px 5px;
 }
 .Water{
-    background-color: bisque;
+    background-color: rgb(104, 144, 240);
+    color: white;
+    padding: 0px 5px;
 }
 .Electric{
-    background-color: bisque;
+    background-color: rgb(248, 208, 48);
+    color: white;
+    padding: 0px 5px;
 }
 .Psychic{
-    background-color: bisque;
+    background-color: rgb(248, 88, 136);
+    color: white;
+    padding: 0px 5px;
 }
 .Ghost{
-    background-color: bisque;
+    background-color: rgb(112, 88, 152);
+    color: white;
+    padding: 0px 5px;
 }
 .Ice{
-    background-color: bisque;
+    background-color: rgb(152, 216, 216);
+    color: white;
+    padding: 0px 5px;
 }
 .Dragon{
-    background-color: bisque;
+    background-color: rgb(112, 56, 248);
+    color: white;
+    padding: 0px 5px;
 }
