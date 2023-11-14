@@ -8,6 +8,18 @@ table, th, td {
     text-align: center;
  }
 
+.HeaderContainer{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: lightblue;
+}
+
+.HeaderContainer img{
+    width: 10%;
+}
+
  /**    Move Styles
  */
 
