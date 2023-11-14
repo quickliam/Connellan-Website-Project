@@ -3,17 +3,22 @@ body{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-table, th, td { 
-    border: 2px solid black; 
+table{ 
     background-color: white;
- } 
- th {
-    text-align: left;
- }
- td{
-    text-align: center;
- }
+    border: 2px solid black; 
 
+} 
+
+th {
+    text-align: left;
+    background-color: lightgray;
+    border: 2px solid black; 
+}
+td{
+    text-align: center;
+    background-color: #E0F4FF;
+    border: 2px solid black; 
+}
 li{
     margin-left: 25px;
 }
