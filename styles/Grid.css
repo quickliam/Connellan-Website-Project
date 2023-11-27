@@ -1,13 +1,13 @@
 #grid-container {
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-columns: auto auto ;
+    gap: 5%;
+    justify-content: center;
  }
 
  #grid-container div{
     background-color: #E0F4FF;
-    border: 1px solid black; 
- } 
-
-.grid-header{
-    font-weight: bold;
-}
+    border: 2px solid black; 
+    text-align: center;
+    width: 300px;
+} 
