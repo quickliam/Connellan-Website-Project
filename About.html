@@ -21,6 +21,44 @@
       </header>
    </head>
    <body>
+      <h2>About this website</h2>
 
+
+         <form id="messageForm">
+            <label for="textInput">Enter Your Message:</label>
+            <input type="text" id="textInput" name="textInput" required>
+    
+            <button type="button" onclick="resetForm()">Reset</button>
+            <button type="button" onclick="submitMessage()">Submit</button>
+        </form>
+        <div id="messageBoard">
+            <h3>Leave a message while you can!</h3>
+            <ul id="messagesList"></ul>
+        </div>
+        <script>
+            function resetForm() {
+                document.getElementById("messageForm").reset();
+            }
+    
+            function submitMessage() {
+                var userInput = document.getElementById("textInput").value;
+    
+                // Perform data validation here
+                if (userInput.trim() === "") {
+                    alert("Please enter a valid message.");
+                    return;
+                }
+    
+                // Create a new list item for the message
+                var listItem = document.createElement("li");
+                listItem.textContent = userInput;
+    
+                // Append the new message to the messages list
+                document.getElementById("messagesList").appendChild(listItem);
+    
+                // Clear the input field after submitting
+                resetForm();
+            }
+        </script>
    </body>
 </html>
