@@ -17,13 +17,41 @@
          <a href='Nature.html'>Natures Effects</a>
          <a href='Pokedex.html'>Pokedex</a>
      </div>
-    <header class = "HeaderContainer">
-              <img src="images/Pokeball.png" alt="Image of a Pokeball">
-              <a href="Index.html"><h1>Pokemon Crystal Legacy Help Tool</h1></a>
-              <img src="images/Crystal.png" alt="Logo for Pokemon Crystal Legacy">
-    </header>
-    <div><h2>Damage Types</h2></div>
+      <header class="HeaderContainer">
+         <img src="images/Pokeball.png" alt="Image of a Pokeball">
+         <a href="Index.html"><h1>Pokemon Crystal Legacy Help Tool</h1></a>
+         <img src="images/Crystal.png" alt="Logo for Pokemon Crystal Legacy">
+      </header>
+      <div><h2>Damage Types</h2></div>
 
+      <script>
+         const damageChart=[
+            ['Physical', 'Normal', 'Fighting', 'Flying', 'Poison', 'Ground', 'Rock', 'Bug', 'Dark', 'Steel'],
+            ['Special', 'Fire', 'Grass', 'Water', 'Electric', 'Psychic', 'Ghost', 'Ice', 'Dragon']
+         ];
+         function generateTable(data){
+            const table= document.createElement('table');
+            for(const row of data){
+               const tr= document.createElement('tr');
+               for(const cell of row){
+                  const tableType= row.indexOf(cell) === 0 ? 'th' : 'td';
+                  const thORtd= document.createElement(tableType);
+
+                  thORtd.textContent = cell;
+                  if(tableType === 'td'){
+                     thORtd.className = cell;
+                  }
+                  tr.appendChild(thORtd);
+               }
+               table.appendChild(tr);
+            }
+            document.body.appendChild(table);
+         }
+         generateTable(damageChart);
+      </script>
+
+
+<!-- What the array is basically creating
     <table>
       <tr>
          <th>Physical</th>
@@ -49,5 +77,6 @@
          <td class="Dragon">Dragon</td>
       </tr>
     </table>
- </body>
+      -->
+   </body>
 </html>
