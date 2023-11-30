@@ -1,64 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <link rel="icon" href="images/favicon.png" type="image/x-icon">
-      <title>Pokemon Crystal Legacy Help Sheet</title>
-      <link rel="stylesheet" href="styles/styles.css">
-      <link rel="stylesheet" href="styles/NavBar.css">
-      <div id="navbar">
-         <a href='Index.html'>Home</a>
-         <a href='About.html'>About This Site</a>
-         <a href='Damage.html'>Physical/Special Types</a>
-         <a href='Encounters.html'>Map Encounters</a>
-         <a href='Nature.html'>Natures Effects</a>
-         <a href='Pokedex.html'>Pokedex</a>
-      </div>
-      <header class="HeaderContainer">
-         <img src="images/Pokeball.png" alt="Image of a Pokeball">
-         <a href="Index.html"><h1>Pokemon Crystal Legacy Help Tool</h1></a>
-         <img src="images/Crystal.png" alt="Logo for Pokemon Crystal Legacy">
-      </header>
-   </head>
-   <body>
-      <h2>About this website</h2>
-
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="images/favicon.png" type="image/x-icon">
+        <title>Pokemon Crystal Legacy Help Sheet</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/NavBar.css">
+        <div id="navbar">
+            <a href='Index.html'>Home</a>
+            <a href='About.html'>About This Site</a>
+            <a href='Damage.html'>Physical/Special Types</a>
+            <a href='Encounters.html'>Map Encounters</a>
+            <a href='Nature.html'>Natures Effects</a>
+            <a href='Pokedex.html'>Pokedex</a>
+        </div>
+        <header class="HeaderContainer">
+            <img src="images/Pokeball.png" alt="Image of a Pokeball">
+            <a href="Index.html"><h1>Pokemon Crystal Legacy Help Tool</h1></a>
+            <img src="images/Crystal.png" alt="Logo for Pokemon Crystal Legacy">
+        </header>
+    </head>
+    <body>
+        <h2>About this website</h2>
+        <p>
+            This is a website was created as a way to bring together a lot of the tools and websites I would use while playing a pokemon game and put them in one spot.
+        </p>
 
          <form id="messageForm">
-            <label for="textInput">Enter Your Message:</label>
+            <h3>This is here because it's a requirement, and I don't have a practical use for it</h3>
+            <label for="textInput">Enter away!</label>
             <input type="text" id="textInput" name="textInput" required>
-    
-            <button type="button" onclick="resetForm()">Reset</button>
             <button type="button" onclick="submitMessage()">Submit</button>
+            <button type="button" onclick="resetForm()">Reset</button>
         </form>
         <div id="messageBoard">
-            <h3>Leave a message while you can!</h3>
             <ul id="messagesList"></ul>
         </div>
         <script>
+            //reset button refreshes page
             function resetForm() {
-                document.getElementById("messageForm").reset();
+                window.location.reload();
             }
-    
+            //Removes all characters that could be used to inject code into the site
+            function sanitizeForInjection(input) {
+                var sanInput = input.replace(/[<>&'"\\/]/g, '');
+                return sanInput;
+            }
+            //Checks the user has entered at least one character after saitized charaters are removed
+            function hasInput(input) {
+                var testInput = /.+/;
+                return testInput.test(input);
+            }
+            //Adds message to the page
             function submitMessage() {
                 var userInput = document.getElementById("textInput").value;
-    
-                // Perform data validation here
-                if (userInput.trim() === "") {
-                    alert("Please enter a valid message.");
-                    return;
+                var sanInput = sanitizeForInjection(userInput);
+                if(hasInput(sanInput)){
+                    var listItem = document.createElement("li");
+                    listItem.textContent = sanInput;
+                    document.getElementById("messagesList").appendChild(listItem);
+                    document.getElementById("messageForm").reset();
                 }
-    
-                // Create a new list item for the message
-                var listItem = document.createElement("li");
-                listItem.textContent = userInput;
-    
-                // Append the new message to the messages list
-                document.getElementById("messagesList").appendChild(listItem);
-    
-                // Clear the input field after submitting
-                resetForm();
+                else{
+                    alert("Please enter text")
+                }
             }
+            //If enter is pressed, treat it like clicking submit
+            document.getElementById("messageForm").addEventListener("keydown", function(event) {
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    submitMessage();
+                }  
+            });
         </script>
    </body>
 </html>
