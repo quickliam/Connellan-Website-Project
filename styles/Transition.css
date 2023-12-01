@@ -1,0 +1,28 @@
+figure{
+    position: relative;
+    width: 50%;
+    max-width: 800px;
+    margin-left: 1%;
+}
+figure:hover .before-image{
+opacity: 0;
+}
+figure:hover .after-image{
+opacity: 1;
+}
+
+.before-image {
+    max-height: 400px;
+    opacity: 1;
+    z-index: 1;
+    transition: opacity 1s ease;
+}
+.after-image {
+    max-height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 1s ease;
+}
