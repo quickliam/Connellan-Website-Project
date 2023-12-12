@@ -14,6 +14,11 @@ th {
     background-color: lightgray;
     border: 2px solid black; 
 }
+/* Changed after submission to be sortable */
+th:hover{
+    cursor:pointer;
+    background-color: rgb(190, 190, 190);
+}
 td{
     text-align: center;
     background-color: #E0F4FF;
@@ -34,4 +39,3 @@ li{
 .HeaderContainer img{
     width: 10%;
 }
-
