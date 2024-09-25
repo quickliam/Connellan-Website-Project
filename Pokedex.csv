@@ -1,4 +1,5 @@
-﻿001,Bulbasaur,Grass,Poison,45,49,49,65,65,45,318,Level 16
+﻿Dex No.,Name,Type1,Type2,HP,Attack,Defense,Special Attack,Special Defense,Speed,Total,Evolution Condition
+001,Bulbasaur,Grass,Poison,45,49,49,65,65,45,318,Level 16
 002,Ivysaur,Grass,Poison,60,62,63,80,80,60,405,Level 32
 003,Venusaur,Grass,Poison,80,82,83,100,100,80,525,N/A
 004,Charmander,Fire,,39,52,43,60,50,65,309,Level 16
